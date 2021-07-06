@@ -89,6 +89,19 @@ usuario preenche sua idade igual a 17
     Press Keys      ${NascimentoAno}    ENTER
     Click Element   ${BtnConfirmaIdade}
 
+usuario preenche sua idade igual a 19
+    Wait Until Element Is Visible  ${NascimentoDia}
+    Click Element   ${NascimentoDia}
+    Press Keys      ${NascimentoDia}    5
+    Press Keys      ${NascimentoDia}    ENTER
+    Click Element   ${NascimentoMes}    
+    Press Keys      ${NascimentoMes}    JULHO
+    Press Keys      ${NascimentoMes}    ENTER
+    Click Element   ${NascimentoAno}
+    Press Keys      ${NascimentoAno}    2002
+    Press Keys      ${NascimentoAno}    ENTER
+    Click Element   ${BtnConfirmaIdade}
+
 sistema mostra um alerta de acesso negado
     Wait Until Element Is Visible   ${AlertaErro}
     Element Should Contain  ${AlertaErro}  ERRO
