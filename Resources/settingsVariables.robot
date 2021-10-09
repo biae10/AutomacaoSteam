@@ -4,3 +4,4 @@ ${Browser}  headlesschrome
 
 #Url base
 ${Url}  https://store.steampowered.com/
+${Teste}  Teste
