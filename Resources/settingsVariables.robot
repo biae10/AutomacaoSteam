@@ -1,6 +1,6 @@
 **Variables***
 #Navegador Utilizado
-${Browser}  Chrome
+${Browser}  headlesschrome
 
 #Url base
 ${Url}  https://store.steampowered.com/

@@ -21,7 +21,8 @@ ${AlertaErro}        //div[contains(text(),"Erro")]
 
 ***Keywords***
 usuario acessa pagina da steam
-    Open Browser    ${Url}  ${Browser}
+    Open Browser     ${Url}  ${Browser}
+    Set Window Size  1400    600
 
 usuario busca por jogo violento
     Wait Until Element Is Visible   ${BarraPesquisa}
