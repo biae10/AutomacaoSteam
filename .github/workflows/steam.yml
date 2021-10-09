@@ -1,0 +1,28 @@
+name: Execução de regressivos da Steam
+
+on:
+  pull_request:
+    branches: [ main ]
+  schedule:
+    -cron:  '0 6 * * 6,0'
+
+jobs: 
+  steam:
+    runs-on: windows-latest
+
+    steps:
+      - name: Clone Projeto
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/checkout@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run:
+          pip install robotframework
+          pip install robotframework-seleniumlibrary
+
+      - name: Executar teste
+        run: robot -d .results Tests/JogoViolento.robot
